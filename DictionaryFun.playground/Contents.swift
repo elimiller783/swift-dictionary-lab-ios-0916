@@ -14,7 +14,12 @@
  */
 // write your code here
 
-
+var states = ["New York" : "Albany",
+              "Ohio" : "Columbus",
+              "Florida" : "Tallahasee",
+              "Georgia" : "Atlanta",
+              "Kentucky": "Frankfort"
+]
 
 
 
@@ -23,7 +28,7 @@
 /*: question2
  ### 2. What is the type of the dictionary you created in Question 1?
  */
-
+print("a mutable dictionary of string keys tied to string values ")
 
 
 
@@ -37,7 +42,7 @@
 // write your code here
 
 
-
+var capital = states["Florida"]
 
 
 
@@ -48,6 +53,9 @@
  */
 // write your code here
 
+if let capital = capital {
+    print("The capital of Florida is \(capital)")
+}
 
 
 
@@ -60,6 +68,7 @@
  */
 // write your code here
 
+let anotherCapital = states["Pennsylvania"]
 
 
 
@@ -73,7 +82,9 @@
 // write your code here
 
 
-
+if anotherCapital == anotherCapital {
+    print ("I dont know Pennsylvania's capital")
+}
 
 
 
@@ -84,8 +95,7 @@
  */
 // write your code here
 
-
-
+states ["Pennsylvania"] = "Harrisburg"
 
 
 
@@ -96,9 +106,11 @@
  */
 // write your code here
 
+ var pa = states["Pennsylvania"]
 
-
-
+if let pa = pa {
+    print("Pennsylvania's capital is \(pa)")
+}
 
 
 
@@ -109,8 +121,9 @@
 // write your code here
 
 
-
-
+print(states)
+states["Pennsylvania"] = nil
+print(states)
 
 
 
@@ -118,10 +131,12 @@
 /*: question10
  ### 10. You have been given the constant `state` with a state name. Use that constant to retrieve the state's capital from the dictionary. Print "The capital of <State> is <Capital>" to the console.
  */
-let state = "New York"
+var state = "New York"
 // write your code here
-
-
+let cap2 = states[state]
+if let cap2 = cap2 {
+    print("The capital of \(state) is \(cap2)")
+}
 
 
 
@@ -141,7 +156,12 @@ let state = "New York"
 // write your code here
 
 
+var bands = ["Nirvana" : ["Kurt Cobain", "Krist Novoselic", "Dave Grohl"],
+    "The Beatles": ["John Lennon", "George Harrison", "Paul McCartney", "Ringo Starr"],
+    "The Breeders": ["Kim Deal", "Kelley Deal", "Josephine Wiggs", "Jim Macpherson"],
+    "The Pixies": ["Frank Black", "Joey Santiago", "Kim Deal", "David Lovering"]
 
+]
 
 
 
@@ -153,7 +173,7 @@ let state = "New York"
  ### 12. What is the type of the dictionary you created in Question 11?
  */
 
-
+print("its a mutable dictionary that contains multiple values per key")
 
 
 
@@ -163,9 +183,12 @@ let state = "New York"
 /*: question13
  ### 13. You have been given a band name in the constant `band` below. Use that band name to retrieve its list of members from the array you created in Question 11. Then unwrap that list of members and print it to the console.
  */
-let bandName = "Pixies"
+let bandName = "The Pixies"
 // write your code here
-
+let thePixies = bands[bandName]
+if let thePixies = thePixies {
+    print("\(thePixies)")
+}
 
 
 
